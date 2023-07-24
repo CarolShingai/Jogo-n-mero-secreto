@@ -2,24 +2,24 @@ function verificarChute(chute) {
   const numero = +chute
 
   if (chuteInvalido(numero)) {
-    elementoChute.innerHTML += '<div>Valor inválido</div>'
+    elementoChute.innerHTML += '<div>Valeur invalide</div>'
   }
   if (numeroForMaiorOuMenor(numero)) {
-    elementoChute.innerHTML += `<div>Valor inválido: fale um número entre ${lowerValue} e ${highestValue}</div>`
+    elementoChute.innerHTML += `<div>Valeur invalide: parler un nombre entre ${lowerValue} et ${highestValue}</div>`
   }
   if (numero === secretNumber) {
     document.body.className = 'corpo'
     document.body.innerHTML = `
-    <h2>Parabéns, você acertou!</h2>
-    <h3>O número secreto era ${secretNumber}</h3>
+    <h2>Félicitations, vous avez réussi!</h2>
+    <h3>Le numéro secret était ${secretNumber}</h3>
 
-    <button id='play-again' class='btn-play'>Jogar novamente</button>`
+    <button id='play-again' class='btn-play'>Rejouer</button>`
   } else if (numero > secretNumber) {
     elementoChute.innerHTML += `
-    <div>O número secreto é menor <i class="fa-solid fa-arrow-down"></i></div>`
+    <div>Le numéro secret est inférieur à <i class="fa-solid fa-arrow-down"></i></div>`
   } else {
     elementoChute.innerHTML += `
-    <div>O número secreto é maior <i class="fa-solid fa-arrow-up"></i></div>`
+    <div>Le numéro secret est supérieur à <i class="fa-solid fa-arrow-up"></i></div>`
   }
 }
 
