@@ -130,3 +130,16 @@ h3{
   border: .05rem solid var(--primary-color);
   color: var(--primary-color);
 }
+
+@media (max-width: 430px) {
+  h1{
+    font-size: 4rem;
+  }
+  h2{
+    font-size: 3rem;
+  }
+  #box{
+    font-size: 3rem;
+    padding: 0.4rem;
+  }
+}
